@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forja de Heróis — Fichas de RPG</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #c9a84c;
+      --gold-light: #e8c97a;
+      --blood: #8b1a1a;
+      --ember: #d4621a;
+      --parchment: #f5e6c8;
+      --ink: #1a1410;
+      --stone: #2a2420;
+      --ash: #3d3530;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: 'Crimson Pro', serif;
+      background-color: #100e0b;
+      color: #d4c9b0;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Noise texture overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    .font-display { font-family: 'Cinzel Decorative', serif; }
+    .font-mono-rpg { font-family: 'Share Tech Mono', monospace; }
+
+    /* Gold border ornament */
+    .ornament-border {
+      border: 1px solid rgba(201,168,76,0.3);
+      box-shadow: inset 0 0 30px rgba(201,168,76,0.04), 0 0 20px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .ornament-border::before, .ornament-border::after {
+      content: '✦';
+      position: absolute;
+      color: var(--gold);
+      font-size: 10px;
+      opacity: 0.6;
+    }
+    .ornament-border::before { top: -6px; left: 12px; }
+    .ornament-border::after  { bottom: -6px; right: 12px; }
+
+    /* Section header with rune line */
+    .rune-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+    }
+    .rune-header::before, .rune-header::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(201,168,76,0.5), transparent);
+    }
+
+    /* Stat circle */
+    .stat-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 2px solid rgba(201,168,76,0.4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 30% 30%, rgba(201,168,76,0.08), transparent);
+      cursor: pointer;
+      transition: all 0.2s;
+      position: relative;
+    }
+    .stat-circle:hover {
+      border-color: var(--gold);
+      box-shadow: 0 0 12px rgba(201,168,76,0.3);
+      transform: scale(1.05);
+    }
+    .stat-circle input {
+      background: transparent;
+      border: none;
+      outline: none;
+      text-align: center;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.25rem;
+      color: var(--gold-light);
+      width: 40px;
+    }
+    .stat-circle span {
+      font-size: 0.55rem;
+      letter-spacing: 0.1em;
+      color: #a09070;
+      text-transform: uppercase;
+      font-family: 'Share Tech Mono', monospace;
+    }
+
+    /* HP / Mana bars */
+    .bar-track {
+      height: 8px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.05);
+      overflow: hidden;
+      position: relative;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.4s ease;
+    }
+    .bar-hp   { background: linear-gradient(to right, #7a1515, #c0392b); }
+    .bar-mana { background: linear-gradient(to right, #1a2a6c, #3a7bd5); }
+    .bar-xp   { background: linear-gradient(to right, #3d2c00, var(--gold)); }
+
+    /* Input fields */
+    .rpg-input {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 4px;
+      color: #d4c9b0;
+      padding: 6px 10px;
+      font-family: 'Crimson Pro', serif;
+      font-size: 1rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      width: 100%;
+    }
+    .rpg-input:focus {
+      outline: none;
+      border-color: rgba(201,168,76,0.6);
+      box-shadow: 0 0 8px rgba(201,168,76,0.1);
+    }
+    .rpg-input::placeholder { color: rgba(180,160,120,0.35); }
+
+    select.rpg-input option { background: #1a1410; }
+
+    textarea.rpg-input { resize: vertical; min-height: 80px; }
+
+    /* Skill checkbox */
+    .skill-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      cursor: pointer;
+    }
+    .skill-check {
+      width: 14px;
+      height: 14px;
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 50%;
+      flex-shrink: 0;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .skill-item.proficient .skill-check {
+      background: var(--gold);
+      box-shadow: 0 0 6px rgba(201,168,76,0.5);
+    }
+
+    /* Trait tag */
+    .trait-tag {
+      display: inline-block;
+      padding: 2px 10px;
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 2px;
+      font-size: 0.75rem;
+      font-family: 'Share Tech Mono', monospace;
+      color: var(--gold);
+      background: rgba(201,168,76,0.05);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .trait-tag:hover { background: rgba(201,168,76,0.12); }
+
+    /* Card section */
+    .card-section {
+      background: rgba(26,20,16,0.8);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 6px;
+      padding: 1.25rem;
+      backdrop-filter: blur(4px);
+    }
+
+    /* Glow on hero name */
+    .hero-name-glow {
+      text-shadow: 0 0 30px rgba(201,168,76,0.3), 0 0 60px rgba(201,168,76,0.1);
+    }
+
+    /* Animated ember particles (CSS only) */
+    @keyframes float-up {
+      0%   { transform: translateY(0) translateX(0) scale(1); opacity: 0.6; }
+      100% { transform: translateY(-80px) translateX(var(--dx)) scale(0); opacity: 0; }
+    }
+    .ember {
+      position: fixed;
+      bottom: 0;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: var(--ember);
+      animation: float-up 3s ease-out infinite;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .ember:nth-child(1)  { left: 10%; animation-delay: 0s;   --dx: 10px; }
+    .ember:nth-child(2)  { left: 25%; animation-delay: 0.7s; --dx: -8px; }
+    .ember:nth-child(3)  { left: 50%; animation-delay: 1.4s; --dx: 12px; }
+    .ember:nth-child(4)  { left: 75%; animation-delay: 0.3s; --dx: -6px; }
+    .ember:nth-child(5)  { left: 90%; animation-delay: 1.9s; --dx: 8px;  }
+
+    /* Page load animation */
+    @keyframes fade-in-up {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .animate-in { animation: fade-in-up 0.6s ease forwards; }
+    .delay-1 { animation-delay: 0.1s; opacity: 0; }
+    .delay-2 { animation-delay: 0.2s; opacity: 0; }
+    .delay-3 { animation-delay: 0.3s; opacity: 0; }
+    .delay-4 { animation-delay: 0.4s; opacity: 0; }
+
+    /* Save button */
+    .btn-forge {
+      background: linear-gradient(135deg, #3d2a00, #7a5200);
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      padding: 10px 28px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-transform: uppercase;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-forge::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.05));
+    }
+    .btn-forge:hover {
+      box-shadow: 0 0 20px rgba(201,168,76,0.35);
+      transform: translateY(-1px);
+    }
+    .btn-forge:active { transform: translateY(0); }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid rgba(201,168,76,0.3);
+      color: #a09070;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      padding: 8px 18px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover { border-color: rgba(201,168,76,0.6); color: var(--gold); }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #100e0b; }
+    ::-webkit-scrollbar-thumb { background: rgba(201,168,76,0.2); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(201,168,76,0.4); }
+
+    /* Responsive grid adjustments */
+    @media (max-width: 640px) {
+      .stat-circle { width: 54px; height: 54px; }
+      .stat-circle input { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body class="relative">
+
+  <!-- Ember particles -->
+  <div class="ember"></div>
+  <div class="ember"></div>
+  <div class="ember"></div>
+  <div class="ember"></div>
+  <div class="ember"></div>
+
+  <!-- Header -->
+  <header class="relative z-10 border-b border-yellow-900/30 bg-black/40 backdrop-blur-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="text-2xl">⚔️</span>
+        <div>
+          <h1 class="font-display text-sm text-yellow-500/90 tracking-widest">FORJA DE HERÓIS</h1>
+          <p class="font-mono-rpg text-xs text-yellow-900/70 tracking-widest">CRIADOR DE FICHAS RPG</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="#" class="font-mono-rpg text-xs text-yellow-700/60 hover:text-yellow-500 transition-colors tracking-widest">MINHAS FICHAS</a>
+        <a href="#" class="font-mono-rpg text-xs text-yellow-700/60 hover:text-yellow-500 transition-colors tracking-widest">BESTIÁRIO</a>
+        <a href="#" class="font-mono-rpg text-xs text-yellow-700/60 hover:text-yellow-500 transition-colors tracking-widest">SOBRE</a>
+        <button class="btn-secondary">ENTRAR</button>
+      </nav>
+      <button class="md:hidden text-yellow-700 text-xl">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero banner -->
+  <div class="relative z-10 py-10 px-4 text-center animate-in delay-1">
+    <div class="font-display text-3xl md:text-5xl text-yellow-500 hero-name-glow mb-2">Nova Ficha</div>
+    <p class="text-yellow-800/70 font-mono-rpg text-xs tracking-widest">FORJE SEU DESTINO — ESCREVA SUA LENDA</p>
+    <div class="flex justify-center gap-2 mt-4">
+      <span class="trait-tag">D&D 5e</span>
+      <span class="trait-tag">Pathfinder</span>
+      <span class="trait-tag">Tormenta20</span>
+      <span class="trait-tag">Livre</span>
+    </div>
+  </div>
+
+  <main class="relative z-10 max-w-6xl mx-auto px-4 pb-16 space-y-6">
+
+    <!-- ── IDENTIDADE DO PERSONAGEM ── -->
+    <section class="card-section animate-in delay-2">
+      <div class="rune-header">
+        <span class="font-display text-xs text-yellow-600 tracking-widest">IDENTIDADE</span>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div>
+          <label class="font-mono-rpg text-xs text-yellow-800/70 tracking-widest block mb-1">NOME DO PERSONAGEM</label>
+          <input type="text" class="rpg-input" placeholder="Ex: Aldric, o Cinzento">
+        </div>
+        <div>
+          <label class="font-mono-rpg text-xs text-yellow-800/70 tracking-widest block mb-1">RAÇA</label>
+          <select class="rpg-input">
+            <option value="">— Escolha —</option>
+            <option>Humano</option>
+            <option>Elfo</option>
+            <option>Anão</option>
+            <option>Halfling</option>
+            <option>Meio-Orc</option>
+            <option>Tiefling</option>
+            <option>Draconato</option>
+            <option>Gnomo</option>
+            <option>Personalizado</option>
+          </select>
+        </div>
+        <div>
+          <label class="font-mono-rpg text-xs text-yellow-800/70 tracking-widest block mb-1">CLASSE</label>
+          <select class="rpg-input">
+            <option value="">— Escolha —</option>
+            <option>Guerreiro</option>
+            <option>Mago</option>
+            <option>Ladino</option>
+            <option>Clérigo</option>
+            <option>Paladino</option>
+            <option>Ranger</option>
+            <option>Druida</option>
+            <option>Bárbaro</option>
+            <option>Bardo</option>
+            <option>Feiticeiro</option>
+            <option>Bruxo</option>
+            <option>Monge</option>
+          </select>
+        </div>
+        <div>
+          <label class="font-mono-rpg text-xs text-yellow-800/70 tracking-widest block mb-1">ANTECEDENTE</label>
+          <input type="text" class="rpg-input" placeholder="Ex: Soldado, Nobre, Sábio...">
+        </div>
+        <div>
+          <label class="font-mono-rpg text-xs text-yellow-800/70 tracking-widest block mb-1">ALINHAMENTO</label>
+          <select class="rpg-input">
+            <option value="">— Escolha —</option>
+            <option>Leal e Bom</option>
+            <option>Neutro e Bom</option>
+            <option>Caótico e Bom</option>
+            <option>Leal e Neutro</option>
+            <option>Neutro</option>
+            <option>Caótico e Neutro</option>
+            <option>Leal e Mau</option>
+            <option>Neutro e Mau</option>
+            <option>Caótico e Mau</option>
+          </select>
+        </div>
+        <div>
+          <label class="font-mono-rpg text-xs text-yellow-800/70 tracking-widest block mb-1">NÍVEL</label>
+          <input type="number" class="rpg-input" placeholder="1" min="1" max="20">
+        </div>
+      </div>
+    </section>
+
+    <!-- ── VIDA, MANA E EXPERIÊNCIA ── -->
+    <section class="card-section animate-in delay-2">
+      <div class="rune-header">
+        <span class="font-display text-xs text-yellow-600 tracking-widest">VITALIDADE</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- HP -->
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="font-mono-rpg text-xs text-red-400/70 tracking-widest">PONTOS DE VIDA</span>
+            <span class="font-mono-rpg text-xs text-red-400" id="hp-display">85 / 100</span>
+          </div>
+          <div class="bar-track mb-2"><div class="bar-fill bar-hp" id="hp-bar" style="width:85%"></div></div>
+          <div class="flex gap-2">
+            <input type="number" class="rpg-input text-center" placeholder="Atual" id="hp-current" oninput="updateBar('hp')" value="85">
+            <span class="text-yellow-800/50 self-center">/</span>
+            <input type="number" class="rpg-input text-center" placeholder="Máx" id="hp-max" oninput="updateBar('hp')" value="100">
+          </div>
+        </div>
+        <!-- Mana -->
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="font-mono-rpg text-xs text-blue-400/70 tracking-widest">PONTOS DE MANA</span>
+            <span class="font-mono-rpg text-xs text-blue-400" id="mp-display">40 / 60</span>
+          </div>
+          <div class="bar-track mb-2"><div class="bar-fill bar-mana" id="mp-bar" style="width:67%"></div></div>
+          <div class="flex gap-2">
+            <input type="number" class="rpg-input text-center" placeholder="Atual" id="mp-current" oninput="updateBar('mp')" value="40">
+            <span class="text-yellow-800/50 self-center">/</span>
+            <input type="number" class="rpg-input text-center" placeholder="Máx" id="mp-max" oninput="updateBar('mp')" value="60">
+          </div>
+        </div>
+        <!-- XP -->
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="font-mono-rpg text-xs text-yellow-600/70 tracking-widest">EXPERIÊNCIA</span>
+            <span class="font-mono-rpg text-xs text-yellow-500" id="xp-display">2400 / 6500</span>
+          </div>
+          <div class="bar-track mb-2"><div class="bar-fill bar-xp" id="xp-bar" style="width:37%"></div></div>
+          <div class="flex gap-2">
+            <input type="number" class="rpg-input text-center" placeholder="XP" id="xp-current" oninput="updateBar('xp')" value="2400">
+            <span class="text-yellow-800/50 self-center">/</span>
+            <input type="number" class="rpg-input text-center" placeholder="Próx." id="xp-max" oninput="updateBar('xp')" value="6500">
+          </div>
+        </div>
+      </div>
+      <!-- Extra vitals -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4 pt-4 border-t border-yellow-900/20">
+        <div class="text-center">
+          <label class="font-mono-rpg text-xs text-yellow-800/60 tracking-widest block mb-1">CA</label>
+          <input type="number" class="rpg-input text-center" placeholder="15">
+        </div>
+        <div class="text-center">
+          <label class="font-mono-rpg text-xs text-yellow-800/60 tracking-widest block mb-1">INICIATIVA</label>
+          <input type="text" class="rpg-input text-center" placeholder="+3">
+        </div>
+        <div class="text-center">
+          <label class="font-mono-rpg text-xs text-yellow-800/60 tracking-widest block mb-1">DESLOCAMENTO</label>
+          <input type="text" class="rpg-input text-center" placeholder="9m">
+        </div>
+        <div class="text-center">
+          <label class="font-mono-rpg text-xs text-yellow-800/60 tracking-widest block mb-1">BÔNUS PROFIC.</label>
+          <input type="text" class="rpg-input text-center" placeholder="+3">
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ATRIBUTOS ── -->
+    <section class="card-section animate-in delay-3">
+      <div class="rune-header">
+        <span class="font-display text-xs text-yellow-600 tracking-widest">ATRIBUTOS</span>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4 md:gap-6">
+        <div class="flex flex-col items-center gap-2">
+          <div class="stat-circle">
+            <input type="number" value="16" min="1" max="30">
+            <span>FOR</span>
+          </div>
+          <span class="font-mono-rpg text-xs text-yellow-700/60">+3</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="stat-circle">
+            <input type="number" value="14" min="1" max="30">
+            <span>DES</span>
+          </div>
+          <span class="font-mono-rpg text-xs text-yellow-700/60">+2</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="stat-circle">
+            <input type="number" value="15" min="1" max="30">
+            <span>CON</span>
+          </div>
+          <span class="font-mono-rpg text-xs text-yellow-700/60">+2</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="stat-circle">
+            <input type="number" value="10" min="1" max="30">
+            <span>INT</span>
+          </div>
+          <span class="font-mono-rpg text-xs text-yellow-700/60">+0</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="stat-circle">
+            <input type="number" value="12" min="1" max="30">
+            <span>SAB</span>
+          </div>
+          <span class="font-mono-rpg text-xs text-yellow-700/60">+1</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="stat-circle">
+            <input type="number" value="13" min="1" max="30">
+            <span>CAR</span>
+          </div>
+          <span class="font-mono-rpg text-xs text-yellow-700/60">+1</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PERÍCIAS E EQUIPAMENTO ── -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-in delay-3">
+
+      <!-- Perícias -->
+      <section class="card-section">
+        <div class="rune-header">
+          <span class="font-display text-xs text-yellow-600 tracking-widest">PERÍCIAS</span>
+        </div>
+        <p class="font-mono-rpg text-xs text-yellow-900/50 mb-3">Clique para marcar proficiência</p>
+        <div class="space-y-0" id="skills-list">
+          <!-- gerado via JS -->
+        </div>
+      </section>
+
+      <!-- Equipamento -->
+      <section class="card-section">
+        <div class="rune-header">
+          <span class="font-display text-xs text-yellow-600 tracking-widest">EQUIPAMENTO</span>
+        </div>
+        <div class="space-y-3">
+          <div>
+            <label class="font-mono-rpg text-xs text-yellow-800/60 tracking-widest block mb-1">ARMA PRINCIPAL</label>
+            <input type="text" class="rpg-input" placeholder="Ex: Espada Longa +1  |  1d8+4 cortante">
+          </div>
+          <div>
+            <label class="font-mono-rpg text-xs text-yellow-800/60 tracking-widest block mb-1">ARMA SECUNDÁRIA</label>
+            <input type="text" class="rpg-input" placeholder="Ex: Adaga  |  1d4+2 perfurante">
+          </div>
+          <div>
+            <label class="font-mono-rpg text-xs text-yellow-800/60 tracking-widest block mb-1">ARMADURA</label>
+            <input type="text" class="rpg-input" placeholder="Ex: Cota de Malha  |  CA 16">
+          </div>
+          <div>
+            <label class="font-mono-rpg text-xs text-yellow-800/60 tracking-widest block mb-1">ITENS E MOEDAS</label>
+            <textarea class="rpg-input" placeholder="Poção de cura ×2, 150 PO, Chave enferrujada..."></textarea>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ── HISTÓRIA E TRAÇOS ── -->
+    <section class="card-section animate-in delay-4">
+      <div class="rune-header">
+        <span class="font-display text-xs text-yellow-600 tracking-widest">HISTÓRIA & TRAÇOS</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="font-mono-rpg text-xs text-yellow-800/60 tracking-widest block mb-1">TRAÇO DE PERSONALIDADE</label>
+          <textarea class="rpg-input" placeholder="Como o personagem se comporta? O que o torna único?"></textarea>
+        </div>
+        <div>
+          <label class="font-mono-rpg text-xs text-yellow-800/60 tracking-widest block mb-1">IDEAL</label>
+          <textarea class="rpg-input" placeholder="O que o personagem valoriza acima de tudo?"></textarea>
+        </div>
+        <div>
+          <label class="font-mono-rpg text-xs text-yellow-800/60 tracking-widest block mb-1">VÍNCULO</label>
+          <textarea class="rpg-input" placeholder="O que conecta o personagem ao mundo?"></textarea>
+        </div>
+        <div>
+          <label class="font-mono-rpg text-xs text-yellow-800/60 tracking-widest block mb-1">FRAQUEZA</label>
+          <textarea class="rpg-input" placeholder="Qual o calcanhar de Aquiles do personagem?"></textarea>
+        </div>
+        <div class="md:col-span-2">
+          <label class="font-mono-rpg text-xs text-yellow-800/60 tracking-widest block mb-1">HISTÓRIA DE FUNDO</label>
+          <textarea class="rpg-input" style="min-height:120px" placeholder="Conte a origem e a jornada do seu herói..."></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HABILIDADES ESPECIAIS ── -->
+    <section class="card-section animate-in delay-4">
+      <div class="rune-header">
+        <span class="font-display text-xs text-yellow-600 tracking-widest">HABILIDADES ESPECIAIS</span>
+      </div>
+      <textarea class="rpg-input" style="min-height:100px" placeholder="Liste magias, talentos, habilidades de classe, poderes raciais..."></textarea>
+    </section>
+
+    <!-- ── AÇÕES ── -->
+    <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4 animate-in delay-4">
+      <button class="btn-forge" onclick="saveSheet()">⚒ FORJAR FICHA</button>
+      <button class="btn-secondary" onclick="clearSheet()">✦ LIMPAR TUDO</button>
+      <button class="btn-secondary" onclick="window.print()">⬡ IMPRIMIR</button>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-yellow-950 border border-yellow-700/50 text-yellow-400 font-mono-rpg text-xs tracking-widest px-6 py-3 rounded shadow-xl opacity-0 transition-opacity duration-300 pointer-events-none z-50">
+      ✦ FICHA SALVA COM SUCESSO
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative z-10 border-t border-yellow-900/20 py-6 text-center">
+    <p class="font-mono-rpg text-xs text-yellow-900/40 tracking-widest">FORJA DE HERÓIS · QUE OS DADOS SEJAM FAVORÁVEIS ⚔️</p>
+  </footer>
+
+  <script>
+    // ── Perícias ──
+    const skills = [
+      { name: 'Acrobacia', attr: 'DES' }, { name: 'Arcanismo', attr: 'INT' },
+      { name: 'Atletismo', attr: 'FOR' }, { name: 'Atuação', attr: 'CAR' },
+      { name: 'Enganação', attr: 'CAR' }, { name: 'Furtividade', attr: 'DES' },
+      { name: 'História', attr: 'INT' }, { name: 'Intimidação', attr: 'CAR' },
+      { name: 'Intuição', attr: 'SAB' }, { name: 'Investigação', attr: 'INT' },
+      { name: 'Lidar c/ Animais', attr: 'SAB' }, { name: 'Medicina', attr: 'SAB' },
+      { name: 'Natureza', attr: 'INT' }, { name: 'Percepção', attr: 'SAB' },
+      { name: 'Persuasão', attr: 'CAR' }, { name: 'Prestidigitação', attr: 'DES' },
+      { name: 'Religião', attr: 'INT' }, { name: 'Sobrevivência', attr: 'SAB' },
+    ];
+
+    const list = document.getElementById('skills-list');
+    skills.forEach(s => {
+      const div = document.createElement('div');
+      div.className = 'skill-item';
+      div.innerHTML = `
+        <div class="skill-check"></div>
+        <span class="flex-1 text-sm text-yellow-200/70">${s.name}</span>
+        <span class="font-mono-rpg text-xs text-yellow-800/50">${s.attr}</span>
+        <span class="font-mono-rpg text-xs text-yellow-600/60 w-8 text-right">+0</span>
+      `;
+      div.addEventListener('click', () => div.classList.toggle('proficient'));
+      list.appendChild(div);
+    });
+
+    // ── Barras de vida/mana/xp ──
+    function updateBar(type) {
+      const cur = parseFloat(document.getElementById(`${type}-current`).value) || 0;
+      const max = parseFloat(document.getElementById(`${type}-max`).value) || 1;
+      const pct = Math.min(100, Math.max(0, (cur / max) * 100));
+      document.getElementById(`${type}-bar`).style.width = pct + '%';
+      const labels = { hp: 'hp-display', mp: 'mp-display', xp: 'xp-display' };
+      document.getElementById(labels[type]).textContent = `${cur} / ${max}`;
+    }
+
+    // ── Toast ──
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      if (msg) t.textContent = msg;
+      t.style.opacity = '1';
+      setTimeout(() => t.style.opacity = '0', 2500);
+    }
+
+    function saveSheet() { showToast('✦ FICHA SALVA COM SUCESSO'); }
+    function clearSheet() {
+      if (confirm('Limpar toda a ficha?')) {
+        document.querySelectorAll('.rpg-input').forEach(el => {
+          if (el.tagName === 'SELECT') el.selectedIndex = 0;
+          else el.value = '';
+        });
+        document.querySelectorAll('.skill-item').forEach(el => el.classList.remove('proficient'));
+        showToast('✦ FICHA LIMPA');
+      }
+    }
+
+    // ── Trait tag toggle (sistema seletor) ──
+    document.querySelectorAll('.trait-tag').forEach(tag => {
+      tag.addEventListener('click', () => {
+        document.querySelectorAll('.trait-tag').forEach(t => {
+          t.style.background = 'rgba(201,168,76,0.05)';
+          t.style.color = 'var(--gold)';
+        });
+        tag.style.background = 'rgba(201,168,76,0.2)';
+        tag.style.color = '#fff';
+      });
+    });
+  </script>
+</body>
+</html>

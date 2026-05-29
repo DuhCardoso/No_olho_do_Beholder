@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=Share+Tech+Mono&display=swap");
-
 :root {
   --gold: #c9a84c;
   --gold-light: #e8c97a;
@@ -25,8 +23,6 @@
   content: "";
   position: fixed;
   inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-  pointer-events: none;
   z-index: 0;
   opacity: 0.4;
 }
@@ -108,7 +104,7 @@
 .bar-hp {
   background: linear-gradient(to right, #7a1515, #c0392b);
 }
-.bar-mana {
+.bar-hp-extra {
   background: linear-gradient(to right, #1a2a6c, #3a7bd5);
 }
 .bar-xp {
@@ -127,8 +123,13 @@
     border-color 0.2s,
     box-shadow 0.2s;
   width: 100%;
+  min-height: 2rem;
 }
-.rpg-input:focus {
+.rpg-input:disabled {
+  opacity: 0.3;
+}
+.rpg-input:focus,
+.rpg-input:hover {
   outline: none;
   border-color: rgba(201, 168, 76, 0.6);
   box-shadow: 0 0 8px rgba(201, 168, 76, 0.1);
@@ -142,6 +143,10 @@ select.rpg-input option {
 textarea.rpg-input {
   resize: vertical;
   min-height: 80px;
+}
+.rpg-input::-webkit-outer-spin-button,
+.rpg-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 .card-section {

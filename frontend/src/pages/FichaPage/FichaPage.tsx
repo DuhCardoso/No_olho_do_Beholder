@@ -16,6 +16,7 @@ import VitalSection from "./components/VitalSection/VitalSection";
 import StatsSection from "./components/StatsSection/StatsSection";
 import SkillsSection from "./components/SkillsSection/SkillsSection";
 import EquipSection from "./components/EquipSection/EquipSection";
+import HistorySection from "./components/HistorySection/HistorySection";
 
 
 const INITIAL_SKILLS: Skill[] = [
@@ -167,29 +168,7 @@ function FichaPage() {
                     </div>
 
                     {/* HISTÓRIA & TRAÇOS */}
-                    <section className="card-section animate-in">
-                        <RuneHeader label="HISTÓRIA & TRAÇOS" />
-                        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px,1fr))", gap: 16 }}>
-                            {[
-                                { label: "TRAÇO DE PERSONALIDADE", key: "traco" as const, placeholder: "Como o personagem se comporta? O que o torna único?" },
-                                { label: "IDEAL", key: "ideal" as const, placeholder: "O que o personagem valoriza acima de tudo?" },
-                                { label: "VÍNCULO", key: "vinculo" as const, placeholder: "O que conecta o personagem ao mundo?" },
-                                { label: "FRAQUEZA", key: "fraqueza" as const, placeholder: "Qual o calcanhar de Aquiles do personagem?" },
-                            ].map(({ label, key, placeholder }) => (
-                                <div key={key}>
-                                    <RpgLabel>{label}</RpgLabel>
-                                    <textarea className="rpg-input" placeholder={placeholder}
-                                        value={sheet[key] as string} onChange={(e) => set(key, e.target.value)} />
-                                </div>
-                            ))}
-                            <div style={{ gridColumn: "1 / -1" }}>
-                                <RpgLabel>HISTÓRIA DE FUNDO</RpgLabel>
-                                <textarea className="rpg-input" style={{ minHeight: 120 }}
-                                    placeholder="Conte a origem e a jornada do seu herói..."
-                                    value={sheet.historia} onChange={(e) => set("historia", e.target.value)} />
-                            </div>
-                        </div>
-                    </section>
+                    <HistorySection sheet={sheet} set={set} />
 
                     {/* HABILIDADES */}
                     <section className="card-section animate-in">

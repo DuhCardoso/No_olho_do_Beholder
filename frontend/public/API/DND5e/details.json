@@ -1,0 +1,61 @@
+{
+  "sistema": "D&D 5e",
+  "racas": [
+    "Humano",
+    "Elfo",
+    "Anão",
+    "Halfling",
+    "Meio-Orc",
+    "Tiefling",
+    "Draconato",
+    "Gnomo",
+    "Personalizado"
+  ],
+  "alinhamentos": [
+    "Leal e Bom",
+    "Neutro e Bom",
+    "Caótico e Bom",
+    "Leal e Neutro",
+    "Neutro",
+    "Caótico e Neutro",
+    "Leal e Mau",
+    "Neutro e Mau",
+    "Caótico e Mau"
+  ],
+  "classes": [
+    "Guerreiro",
+    "Mago",
+    "Ladino",
+    "Clérigo",
+    "Paladino",
+    "Ranger",
+    "Druida",
+    "Bárbaro",
+    "Bardo",
+    "Feiticeiro",
+    "Bruxo",
+    "Monge"
+  ],
+  "subClasses": {
+    "Guerreiro": ["Campeão", "Mestre de Batalha", "Cavaleiro Arcano"],
+    "Mago": ["Evocador", "Ilusionista", "Necromante"],
+    "Ladino": ["Assassino", "Trapaceiro Arcano", "Ladrão"],
+    "Clérigo": [
+      "Domínio da Vida",
+      "Domínio da Guerra",
+      "Domínio da Tempestade"
+    ],
+    "Paladino": [
+      "Juramento de Devoção",
+      "Juramento dos Anciões",
+      "Juramento de Vingança"
+    ],
+    "Ranger": ["Caçador", "Mestre dos Animais"],
+    "Druida": ["Círculo da Terra", "Círculo da Lua"],
+    "Bárbaro": ["Berserker", "Totem Guerreiro"],
+    "Bardo": ["Colégio do Conhecimento", "Colégio da Eloquência"],
+    "Feiticeiro": ["Linagem Dracônica", "Magia Selvagem"],
+    "Bruxo": ["Pacto da Lâmina", "Pacto do Tomo"],
+    "Monge": ["Tradição do Caminho Aberto", "Tradição do Punho do Dragão"]
+  }
+}

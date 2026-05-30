@@ -53,6 +53,24 @@
   );
 }
 
+.rune-ability {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.rune-ability::before,
+.rune-ability::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(201, 168, 76, 0.5),
+    transparent
+  );
+}
+
 .stat-circle {
   width: 64px;
   height: 64px;

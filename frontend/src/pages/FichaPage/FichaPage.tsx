@@ -7,8 +7,6 @@ import { type SheetState, type Skill, type Stat, } from "./types/FichaTypes";
 import { getSistemaDetails } from "../../script/api/SistemaDetails";
 
 // Components
-import RpgLabel from "../../layout/RpgLabel";
-import RuneHeader from "../../layout/RuneHeader";
 import Navbar from "../../layout/Navbar";
 import IdentidadeSection from "./components/IdentidadeSection";
 import HeroBanner from "../../layout/HeroBanner";
@@ -17,6 +15,7 @@ import StatsSection from "./components/StatsSection/StatsSection";
 import SkillsSection from "./components/SkillsSection/SkillsSection";
 import EquipSection from "./components/EquipSection/EquipSection";
 import HistorySection from "./components/HistorySection/HistorySection";
+import AbilitySection from "./components/AbilitySection/AbilitySection";
 
 
 const INITIAL_SKILLS: Skill[] = [
@@ -49,6 +48,8 @@ const INITIAL_STATS: Stat[] = [
     { key: "CAR", label: "CAR", value: 10 },
 ];
 
+const lorem = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur illo voluptatum aut? Doloremque repudiandae incidunt inventore ipsam recusandae voluptas temporibus ea, impedit quisquam, molestiae officiis voluptate optio sint sequi ipsum!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur illo voluptatum aut? Doloremque repudiandae incidunt inventore ipsam recusandae voluptas temporibus ea, impedit quisquam, molestiae officiis voluptate optio sint sequi ipsum!"
+
 const INITIAL_SHEET: SheetState = {
     sistema: "",
     nome: "", raca: "", classe: "", antecedente: "", alinhamento: "", nivel: 1,
@@ -59,7 +60,7 @@ const INITIAL_SHEET: SheetState = {
     stats: INITIAL_STATS,
     skills: INITIAL_SKILLS,
     armaPrincipal: "", armaSecundaria: "", armadura: "", itens: "", moedas: { PC: 0, PP: 0, PE: 0, PO: 0, PL: 0 },
-    traco: "", ideal: "", vinculo: "", fraqueza: "", historia: "", habilidades: "",
+    traco: "", ideal: "", vinculo: "", fraqueza: "", historia: "", habilidades: { raca: [{ name: "Humano 1", description: lorem }, { name: "Humano 1", description: lorem }], classe: [{ name: "Habilidade 1", description: lorem }] },
 };
 
 /* ── Main component ── */
@@ -167,16 +168,11 @@ function FichaPage() {
 
                     </div>
 
+                    {/* HABILIDADES */}
+                    <AbilitySection habilidades={sheet.habilidades} />
+
                     {/* HISTÓRIA & TRAÇOS */}
                     <HistorySection sheet={sheet} set={set} />
-
-                    {/* HABILIDADES */}
-                    <section className="card-section animate-in">
-                        <RuneHeader label="HABILIDADES ESPECIAIS" />
-                        <textarea className="rpg-input" style={{ minHeight: 100 }}
-                            placeholder="Liste magias, talentos, habilidades de classe, poderes raciais..."
-                            value={sheet.habilidades} onChange={(e) => set("habilidades", e.target.value)} />
-                    </section>
 
                     {/* ACTIONS */}
                     <div style={{ display: "flex", justifyContent: "center", gap: 16, flexWrap: "wrap", paddingTop: 8 }}>

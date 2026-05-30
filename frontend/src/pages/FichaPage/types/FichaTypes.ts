@@ -25,6 +25,12 @@ export interface Moedas {
     PL: number | any;
 }
 
+
+export interface Habilidades {
+    name: string;
+    description: string;
+}
+
 export interface SheetState {
     sistema: string;
     nome: string;
@@ -52,5 +58,8 @@ export interface SheetState {
     vinculo: string;
     fraqueza: string;
     historia: string;
-    habilidades: string;
+    habilidades: {
+        raca?: Habilidades[];
+        classe?: Habilidades[];
+    };
 }

@@ -1,0 +1,19 @@
+{
+  "sistema": "SISTEMA",
+  "racas": ["Humano"],
+  "alinhamentos": [
+    "Leal e Bom",
+    "Neutro e Bom",
+    "Caótico e Bom",
+    "Leal e Neutro",
+    "Neutro",
+    "Caótico e Neutro",
+    "Leal e Mau",
+    "Neutro e Mau",
+    "Caótico e Mau"
+  ],
+  "classes": [{ "name": "Guerreiro" }],
+  "subClasses": {
+    "Guerreiro": ["Campeão", "Mestre de Batalha"]
+  }
+}

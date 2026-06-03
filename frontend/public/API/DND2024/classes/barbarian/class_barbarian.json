@@ -1,0 +1,182 @@
+{
+  "index": "barbarian",
+  "name": "Barbaro",
+  "primary_ability": {
+    "desc": "Strength",
+    "ability_scores": [
+      {
+        "index": "for",
+        "name": "FOR"
+      }
+    ]
+  },
+  "hit_die": 12,
+  "proficiency_choices": [
+    {
+      "desc": "Escolher 2 entre: Lidar c/ Animais, Acrobacia, Intimidação, Natureza, Percepção, ou Sobrevivência",
+      "choose": 2,
+      "type": "proficiencies",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill-animal-handling",
+              "name": "Lidar c/ Animais"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill-athletics",
+              "name": "Acrobacia"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill-intimidation",
+              "name": "Intimidação"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill-nature",
+              "name": "Natureza"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill-perception",
+              "name": "Percepção"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill-survival",
+              "name": "Sobrevivência"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "proficiencies": [
+    {
+      "index": "light-armor",
+      "name": "Armadura Leve",
+      "url": "/api/2024/proficiencies/light-armor"
+    },
+    {
+      "index": "medium-armor",
+      "name": "Armadura Média",
+      "url": "/api/2024/proficiencies/medium-armor"
+    },
+    {
+      "index": "shields",
+      "name": "Escudos",
+      "url": "/api/2024/proficiencies/shields"
+    },
+    {
+      "index": "simple-weapons",
+      "name": "Armas Simples",
+      "url": "/api/2024/proficiencies/simple-weapons"
+    },
+    {
+      "index": "martial-weapons",
+      "name": "Armas Marcial",
+      "url": "/api/2024/proficiencies/martial-weapons"
+    }
+  ],
+  "saving_throws": [
+    {
+      "index": "for",
+      "name": "FOR"
+    },
+    {
+      "index": "con",
+      "name": "CON"
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "(a) Greataxe, 4 Handaxes, Explorer's Pack, and 15 GP or (b) 75 GP",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "multiple",
+            "items": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "greataxe",
+                  "name": "Greataxe",
+                  "url": "/api/2024/equipment/greataxe"
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 4,
+                "of": {
+                  "index": "handaxe",
+                  "name": "Handaxe",
+                  "url": "/api/2024/equipment/handaxe"
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "explorers-pack",
+                  "name": "Explorer's Pack",
+                  "url": "/api/2024/equipment/explorers-pack"
+                }
+              },
+              {
+                "option_type": "money",
+                "count": 15,
+                "unit": "gp"
+              }
+            ]
+          },
+          {
+            "option_type": "money",
+            "count": 75,
+            "unit": "gp"
+          }
+        ]
+      }
+    }
+  ],
+  "class_levels": "/api/DND2024/classes/barbarian/levels",
+  "multi_classing": {
+    "prerequisites": [
+      {
+        "ability_score": {
+          "index": "for",
+          "name": "FOR"
+        },
+        "minimum_score": 13
+      }
+    ],
+    "proficiencies": [
+      {
+        "index": "shields",
+        "name": "Escudos"
+      },
+      {
+        "index": "martial-weapons",
+        "name": "Armas Marcial"
+      }
+    ]
+  },
+  "subclasses": "/api/DND2024/classes/barbarian/subclasses"
+}

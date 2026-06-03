@@ -74,7 +74,7 @@ function FichaPage() {
 
     useEffect(() => {
         if (sistemaDetail) {
-            getSistemaDetails(setSistemaDetail, setError);
+            getSistemaDetails("/API/DND5e/details.json", setSistemaDetail, setError);
         }
     }, []);
 
@@ -121,6 +121,11 @@ function FichaPage() {
         }
     };
 
+    //SaveButton
+    // const saveSheet = () => {
+    //     localStorage.setItem("novaFicha", JSON.stringify(sheet));
+    //     showToast("✦ FICHA SALVAMENTO RAPIDO COM SUCESSO");
+    // };
 
     return (
         <>

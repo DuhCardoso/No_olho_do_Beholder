@@ -1,0 +1,560 @@
+[
+  {
+    "level": 1,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "divine-order",
+        "name": "Divine Order",
+        "url": "/api/2024/features/divine-order"
+      },
+      {
+        "index": "spellcasting",
+        "name": "Spellcasting",
+        "url": "/api/2024/features/spellcasting"
+      }
+    ],
+    "class_specific": {
+      "spellcasting": {
+        "cantrips": 3,
+        "level": 1,
+        "slots": [
+          2
+        ]
+      }
+    },
+    "index": "cleric-1",
+    "url": "/api/2024/classes/cleric/levels/1"
+  },
+  {
+    "level": 2,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "channel-divinity-2-uses",
+        "name": "Channel Divinity (2/rest)",
+        "url": "/api/2024/features/channel-divinity-2-uses"
+      },
+      {
+        "index": "divine-order-feature-1",
+        "name": "Order Feature",
+        "url": "/api/2024/features/divine-order-feature-1"
+      }
+    ],
+    "class_specific": {
+      "spellcasting": {
+        "cantrips": 3,
+        "level": 1,
+        "slots": [
+          3
+        ]
+      }
+    },
+    "index": "cleric-2",
+    "url": "/api/2024/classes/cleric/levels/2"
+  },
+  {
+    "level": 3,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "divine-order-feature-2",
+        "name": "Order Feature",
+        "url": "/api/2024/features/divine-order-feature-2"
+      }
+    ],
+    "class_specific": {
+      "spellcasting": {
+        "cantrips": 3,
+        "level": 2,
+        "slots": [
+          4,
+          2
+        ]
+      }
+    },
+    "index": "cleric-3",
+    "url": "/api/2024/classes/cleric/levels/3"
+  },
+  {
+    "level": 4,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "cleric-ability-score-improvement-1",
+        "name": "Ability Score Improvement",
+        "url": "/api/2024/features/cleric-ability-score-improvement-1"
+      }
+    ],
+    "class_specific": {
+      "spellcasting": {
+        "cantrips": 4,
+        "level": 2,
+        "slots": [
+          4,
+          3
+        ]
+      }
+    },
+    "index": "cleric-4",
+    "url": "/api/2024/classes/cleric/levels/4"
+  },
+  {
+    "level": 5,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "destroy-undead-cr-1-2",
+        "name": "Destroy Undead (CR 1/2)",
+        "url": "/api/2024/features/destroy-undead-cr-1-2"
+      }
+    ],
+    "class_specific": {
+      "spellcasting": {
+        "cantrips": 4,
+        "level": 3,
+        "slots": [
+          4,
+          3,
+          2
+        ]
+      }
+    },
+    "index": "cleric-5",
+    "url": "/api/2024/classes/cleric/levels/5"
+  },
+  {
+    "level": 6,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "divine-order-feature-3",
+        "name": "Order Feature",
+        "url": "/api/2024/features/divine-order-feature-3"
+      }
+    ],
+    "class_specific": {
+      "spellcasting": {
+        "cantrips": 4,
+        "level": 3,
+        "slots": [
+          4,
+          3,
+          3
+        ]
+      }
+    },
+    "index": "cleric-6",
+    "url": "/api/2024/classes/cleric/levels/6"
+  },
+  {
+    "level": 7,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "divine-order-feature-4",
+        "name": "Order Feature",
+        "url": "/api/2024/features/divine-order-feature-4"
+      }
+    ],
+    "class_specific": {
+      "spellcasting": {
+        "cantrips": 4,
+        "level": 4,
+        "slots": [
+          4,
+          3,
+          3,
+          1
+        ]
+      }
+    },
+    "index": "cleric-7",
+    "url": "/api/2024/classes/cleric/levels/7"
+  },
+  {
+    "level": 8,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "cleric-ability-score-improvement-2",
+        "name": "Ability Score Improvement",
+        "url": "/api/2024/features/cleric-ability-score-improvement-2"
+      }
+    ],
+    "class_specific": {
+      "spellcasting": {
+        "cantrips": 4,
+        "level": 4,
+        "slots": [
+          4,
+          3,
+          3,
+          2
+        ]
+      }
+    },
+    "index": "cleric-8",
+    "url": "/api/2024/classes/cleric/levels/8"
+  },
+  {
+    "level": 9,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "destroy-undead-cr-1",
+        "name": "Destroy Undead (CR 1)",
+        "url": "/api/2024/features/destroy-undead-cr-1"
+      }
+    ],
+    "class_specific": {
+      "spellcasting": {
+        "cantrips": 4,
+        "level": 5,
+        "slots": [
+          4,
+          3,
+          3,
+          3,
+          1
+        ]
+      }
+    },
+    "index": "cleric-9",
+    "url": "/api/2024/classes/cleric/levels/9"
+  },
+  {
+    "level": 10,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "divine-order-feature-5",
+        "name": "Order Feature",
+        "url": "/api/2024/features/divine-order-feature-5"
+      }
+    ],
+    "class_specific": {
+      "spellcasting": {
+        "cantrips": 5,
+        "level": 5,
+        "slots": [
+          4,
+          3,
+          3,
+          3,
+          2
+        ]
+      }
+    },
+    "index": "cleric-10",
+    "url": "/api/2024/classes/cleric/levels/10"
+  },
+  {
+    "level": 11,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "divine-order-feature-6",
+        "name": "Order Feature",
+        "url": "/api/2024/features/divine-order-feature-6"
+      }
+    ],
+    "class_specific": {
+      "spellcasting": {
+        "cantrips": 5,
+        "level": 6,
+        "slots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1
+        ]
+      }
+    },
+    "index": "cleric-11",
+    "url": "/api/2024/classes/cleric/levels/11"
+  },
+  {
+    "level": 12,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "cleric-ability-score-improvement-3",
+        "name": "Ability Score Improvement",
+        "url": "/api/2024/features/cleric-ability-score-improvement-3"
+      }
+    ],
+    "class_specific": {
+      "spellcasting": {
+        "cantrips": 5,
+        "level": 6,
+        "slots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1
+        ]
+      }
+    },
+    "index": "cleric-12",
+    "url": "/api/2024/classes/cleric/levels/12"
+  },
+  {
+    "level": 13,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "destroy-undead-cr-2",
+        "name": "Destroy Undead (CR 2)",
+        "url": "/api/2024/features/destroy-undead-cr-2"
+      }
+    ],
+    "class_specific": {
+      "spellcasting": {
+        "cantrips": 5,
+        "level": 7,
+        "slots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1
+        ]
+      }
+    },
+    "index": "cleric-13",
+    "url": "/api/2024/classes/cleric/levels/13"
+  },
+  {
+    "level": 14,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "divine-order-feature-7",
+        "name": "Order Feature",
+        "url": "/api/2024/features/divine-order-feature-7"
+      }
+    ],
+    "class_specific": {
+      "spellcasting": {
+        "cantrips": 5,
+        "level": 7,
+        "slots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1
+        ]
+      }
+    },
+    "index": "cleric-14",
+    "url": "/api/2024/classes/cleric/levels/14"
+  },
+  {
+    "level": 15,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "divine-order-feature-8",
+        "name": "Order Feature",
+        "url": "/api/2024/features/divine-order-feature-8"
+      }
+    ],
+    "class_specific": {
+      "spellcasting": {
+        "cantrips": 5,
+        "level": 8,
+        "slots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "index": "cleric-15",
+    "url": "/api/2024/classes/cleric/levels/15"
+  },
+  {
+    "level": 16,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "cleric-ability-score-improvement-4",
+        "name": "Ability Score Improvement",
+        "url": "/api/2024/features/cleric-ability-score-improvement-4"
+      }
+    ],
+    "class_specific": {
+      "spellcasting": {
+        "cantrips": 5,
+        "level": 8,
+        "slots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "index": "cleric-16",
+    "url": "/api/2024/classes/cleric/levels/16"
+  },
+  {
+    "level": 17,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "divine-order-feature-9",
+        "name": "Order Feature",
+        "url": "/api/2024/features/divine-order-feature-9"
+      }
+    ],
+    "class_specific": {
+      "spellcasting": {
+        "cantrips": 5,
+        "level": 9,
+        "slots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "index": "cleric-17",
+    "url": "/api/2024/classes/cleric/levels/17"
+  },
+  {
+    "level": 18,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "channel-divinity-4-uses",
+        "name": "Channel Divinity (4/rest)",
+        "url": "/api/2024/features/channel-divinity-4-uses"
+      }
+    ],
+    "class_specific": {
+      "spellcasting": {
+        "cantrips": 5,
+        "level": 9,
+        "slots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "index": "cleric-18",
+    "url": "/api/2024/classes/cleric/levels/18"
+  },
+  {
+    "level": 19,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "cleric-ability-score-improvement-5",
+        "name": "Ability Score Improvement",
+        "url": "/api/2024/features/cleric-ability-score-improvement-5"
+      }
+    ],
+    "class_specific": {
+      "spellcasting": {
+        "cantrips": 5,
+        "level": 9,
+        "slots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "index": "cleric-19",
+    "url": "/api/2024/classes/cleric/levels/19"
+  },
+  {
+    "level": 20,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "divine-order-feature-10",
+        "name": "Order Feature",
+        "url": "/api/2024/features/divine-order-feature-10"
+      }
+    ],
+    "class_specific": {
+      "spellcasting": {
+        "cantrips": 5,
+        "level": 9,
+        "slots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "index": "cleric-20",
+    "url": "/api/2024/classes/cleric/levels/20"
+  }
+]

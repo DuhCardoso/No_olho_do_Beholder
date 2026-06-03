@@ -1,0 +1,874 @@
+[
+  {
+    "level": 1,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "spellcasting",
+        "name": "Spellcasting",
+        "url": "/api/2024/features/spellcasting"
+      },
+      {
+        "index": "sorcerous-origin",
+        "name": "Sorcerous Origin",
+        "url": "/api/2024/features/sorcerous-origin"
+      }
+    ],
+    "class_specific": {
+      "spellcasting": {
+        "cantrips_known": 4,
+        "spells_known": 2,
+        "spell_slots": [
+          {
+            "level": 1,
+            "slots": 2
+          }
+        ]
+      }
+    },
+    "index": "sorcerer-1",
+    "url": "/api/2024/classes/sorcerer/levels/1"
+  },
+  {
+    "level": 2,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "font-of-magic",
+        "name": "Font of Magic",
+        "url": "/api/2024/features/font-of-magic"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 2,
+      "spellcasting": {
+        "cantrips_known": 4,
+        "spells_known": 3,
+        "spell_slots": [
+          {
+            "level": 1,
+            "slots": 3
+          }
+        ]
+      }
+    },
+    "index": "sorcerer-2",
+    "url": "/api/2024/classes/sorcerer/levels/2"
+  },
+  {
+    "level": 3,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "metamagic",
+        "name": "Metamagic",
+        "url": "/api/2024/features/metamagic"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 3,
+      "spellcasting": {
+        "cantrips_known": 4,
+        "spells_known": 4,
+        "spell_slots": [
+          {
+            "level": 1,
+            "slots": 4
+          },
+          {
+            "level": 2,
+            "slots": 2
+          }
+        ]
+      }
+    },
+    "index": "sorcerer-3",
+    "url": "/api/2024/classes/sorcerer/levels/3"
+  },
+  {
+    "level": 4,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "sorcerer-ability-score-improvement-1",
+        "name": "Ability Score Improvement",
+        "url": "/api/2024/features/sorcerer-ability-score-improvement-1"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 4,
+      "spellcasting": {
+        "cantrips_known": 5,
+        "spells_known": 5,
+        "spell_slots": [
+          {
+            "level": 1,
+            "slots": 4
+          },
+          {
+            "level": 2,
+            "slots": 3
+          }
+        ]
+      }
+    },
+    "index": "sorcerer-4",
+    "url": "/api/2024/classes/sorcerer/levels/4"
+  },
+  {
+    "level": 5,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "sorcerous-origin-feature-1",
+        "name": "Origin Feature",
+        "url": "/api/2024/features/sorcerous-origin-feature-1"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 5,
+      "spellcasting": {
+        "cantrips_known": 5,
+        "spells_known": 6,
+        "spell_slots": [
+          {
+            "level": 1,
+            "slots": 4
+          },
+          {
+            "level": 2,
+            "slots": 3
+          },
+          {
+            "level": 3,
+            "slots": 2
+          }
+        ]
+      }
+    },
+    "index": "sorcerer-5",
+    "url": "/api/2024/classes/sorcerer/levels/5"
+  },
+  {
+    "level": 6,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "sorcerous-origin-feature-2",
+        "name": "Origin Feature",
+        "url": "/api/2024/features/sorcerous-origin-feature-2"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 6,
+      "spellcasting": {
+        "cantrips_known": 5,
+        "spells_known": 7,
+        "spell_slots": [
+          {
+            "level": 1,
+            "slots": 4
+          },
+          {
+            "level": 2,
+            "slots": 3
+          },
+          {
+            "level": 3,
+            "slots": 3
+          }
+        ]
+      }
+    },
+    "index": "sorcerer-6",
+    "url": "/api/2024/classes/sorcerer/levels/6"
+  },
+  {
+    "level": 7,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "sorcerous-origin-feature-3",
+        "name": "Origin Feature",
+        "url": "/api/2024/features/sorcerous-origin-feature-3"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 7,
+      "spellcasting": {
+        "cantrips_known": 5,
+        "spells_known": 8,
+        "spell_slots": [
+          {
+            "level": 1,
+            "slots": 4
+          },
+          {
+            "level": 2,
+            "slots": 3
+          },
+          {
+            "level": 3,
+            "slots": 3
+          },
+          {
+            "level": 4,
+            "slots": 1
+          }
+        ]
+      }
+    },
+    "index": "sorcerer-7",
+    "url": "/api/2024/classes/sorcerer/levels/7"
+  },
+  {
+    "level": 8,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "sorcerer-ability-score-improvement-2",
+        "name": "Ability Score Improvement",
+        "url": "/api/2024/features/sorcerer-ability-score-improvement-2"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 8,
+      "spellcasting": {
+        "cantrips_known": 5,
+        "spells_known": 9,
+        "spell_slots": [
+          {
+            "level": 1,
+            "slots": 4
+          },
+          {
+            "level": 2,
+            "slots": 3
+          },
+          {
+            "level": 3,
+            "slots": 3
+          },
+          {
+            "level": 4,
+            "slots": 2
+          }
+        ]
+      }
+    },
+    "index": "sorcerer-8",
+    "url": "/api/2024/classes/sorcerer/levels/8"
+  },
+  {
+    "level": 9,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "sorcerous-origin-feature-4",
+        "name": "Origin Feature",
+        "url": "/api/2024/features/sorcerous-origin-feature-4"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 9,
+      "spellcasting": {
+        "cantrips_known": 5,
+        "spells_known": 10,
+        "spell_slots": [
+          {
+            "level": 1,
+            "slots": 4
+          },
+          {
+            "level": 2,
+            "slots": 3
+          },
+          {
+            "level": 3,
+            "slots": 3
+          },
+          {
+            "level": 4,
+            "slots": 3
+          },
+          {
+            "level": 5,
+            "slots": 1
+          }
+        ]
+      }
+    },
+    "index": "sorcerer-9",
+    "url": "/api/2024/classes/sorcerer/levels/9"
+  },
+  {
+    "level": 10,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "metamagic-additional",
+        "name": "Metamagic",
+        "url": "/api/2024/features/metamagic"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 10,
+      "spellcasting": {
+        "cantrips_known": 6,
+        "spells_known": 11,
+        "spell_slots": [
+          {
+            "level": 1,
+            "slots": 4
+          },
+          {
+            "level": 2,
+            "slots": 3
+          },
+          {
+            "level": 3,
+            "slots": 3
+          },
+          {
+            "level": 4,
+            "slots": 3
+          },
+          {
+            "level": 5,
+            "slots": 2
+          }
+        ]
+      }
+    },
+    "index": "sorcerer-10",
+    "url": "/api/2024/classes/sorcerer/levels/10"
+  },
+  {
+    "level": 11,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "sorcerous-origin-feature-5",
+        "name": "Origin Feature",
+        "url": "/api/2024/features/sorcerous-origin-feature-5"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 11,
+      "spellcasting": {
+        "cantrips_known": 6,
+        "spells_known": 12,
+        "spell_slots": [
+          {
+            "level": 1,
+            "slots": 4
+          },
+          {
+            "level": 2,
+            "slots": 3
+          },
+          {
+            "level": 3,
+            "slots": 3
+          },
+          {
+            "level": 4,
+            "slots": 3
+          },
+          {
+            "level": 5,
+            "slots": 2
+          },
+          {
+            "level": 6,
+            "slots": 1
+          }
+        ]
+      }
+    },
+    "index": "sorcerer-11",
+    "url": "/api/2024/classes/sorcerer/levels/11"
+  },
+  {
+    "level": 12,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "sorcerer-ability-score-improvement-3",
+        "name": "Ability Score Improvement",
+        "url": "/api/2024/features/sorcerer-ability-score-improvement-3"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 12,
+      "spellcasting": {
+        "cantrips_known": 6,
+        "spells_known": 12,
+        "spell_slots": [
+          {
+            "level": 1,
+            "slots": 4
+          },
+          {
+            "level": 2,
+            "slots": 3
+          },
+          {
+            "level": 3,
+            "slots": 3
+          },
+          {
+            "level": 4,
+            "slots": 3
+          },
+          {
+            "level": 5,
+            "slots": 2
+          },
+          {
+            "level": 6,
+            "slots": 1
+          }
+        ]
+      }
+    },
+    "index": "sorcerer-12",
+    "url": "/api/2024/classes/sorcerer/levels/12"
+  },
+  {
+    "level": 13,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "sorcerous-origin-feature-6",
+        "name": "Origin Feature",
+        "url": "/api/2024/features/sorcerous-origin-feature-6"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 13,
+      "spellcasting": {
+        "cantrips_known": 6,
+        "spells_known": 13,
+        "spell_slots": [
+          {
+            "level": 1,
+            "slots": 4
+          },
+          {
+            "level": 2,
+            "slots": 3
+          },
+          {
+            "level": 3,
+            "slots": 3
+          },
+          {
+            "level": 4,
+            "slots": 3
+          },
+          {
+            "level": 5,
+            "slots": 2
+          },
+          {
+            "level": 6,
+            "slots": 1
+          },
+          {
+            "level": 7,
+            "slots": 1
+          }
+        ]
+      }
+    },
+    "index": "sorcerer-13",
+    "url": "/api/2024/classes/sorcerer/levels/13"
+  },
+  {
+    "level": 14,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "metamagic-additional-2",
+        "name": "Metamagic",
+        "url": "/api/2024/features/metamagic"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 14,
+      "spellcasting": {
+        "cantrips_known": 6,
+        "spells_known": 14,
+        "spell_slots": [
+          {
+            "level": 1,
+            "slots": 4
+          },
+          {
+            "level": 2,
+            "slots": 3
+          },
+          {
+            "level": 3,
+            "slots": 3
+          },
+          {
+            "level": 4,
+            "slots": 3
+          },
+          {
+            "level": 5,
+            "slots": 2
+          },
+          {
+            "level": 6,
+            "slots": 1
+          },
+          {
+            "level": 7,
+            "slots": 1
+          }
+        ]
+      }
+    },
+    "index": "sorcerer-14",
+    "url": "/api/2024/classes/sorcerer/levels/14"
+  },
+  {
+    "level": 15,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "sorcerous-origin-feature-7",
+        "name": "Origin Feature",
+        "url": "/api/2024/features/sorcerous-origin-feature-7"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 15,
+      "spellcasting": {
+        "cantrips_known": 6,
+        "spells_known": 15,
+        "spell_slots": [
+          {
+            "level": 1,
+            "slots": 4
+          },
+          {
+            "level": 2,
+            "slots": 3
+          },
+          {
+            "level": 3,
+            "slots": 3
+          },
+          {
+            "level": 4,
+            "slots": 3
+          },
+          {
+            "level": 5,
+            "slots": 2
+          },
+          {
+            "level": 6,
+            "slots": 1
+          },
+          {
+            "level": 7,
+            "slots": 1
+          }
+        ]
+      }
+    },
+    "index": "sorcerer-15",
+    "url": "/api/2024/classes/sorcerer/levels/15"
+  },
+  {
+    "level": 16,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "sorcerer-ability-score-improvement-4",
+        "name": "Ability Score Improvement",
+        "url": "/api/2024/features/sorcerer-ability-score-improvement-4"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 16,
+      "spellcasting": {
+        "cantrips_known": 6,
+        "spells_known": 15,
+        "spell_slots": [
+          {
+            "level": 1,
+            "slots": 4
+          },
+          {
+            "level": 2,
+            "slots": 3
+          },
+          {
+            "level": 3,
+            "slots": 3
+          },
+          {
+            "level": 4,
+            "slots": 3
+          },
+          {
+            "level": 5,
+            "slots": 2
+          },
+          {
+            "level": 6,
+            "slots": 1
+          },
+          {
+            "level": 7,
+            "slots": 1
+          }
+        ]
+      }
+    },
+    "index": "sorcerer-16",
+    "url": "/api/2024/classes/sorcerer/levels/16"
+  },
+  {
+    "level": 17,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "sorcerous-origin-feature-8",
+        "name": "Origin Feature",
+        "url": "/api/2024/features/sorcerous-origin-feature-8"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 17,
+      "spellcasting": {
+        "cantrips_known": 6,
+        "spells_known": 16,
+        "spell_slots": [
+          {
+            "level": 1,
+            "slots": 4
+          },
+          {
+            "level": 2,
+            "slots": 3
+          },
+          {
+            "level": 3,
+            "slots": 3
+          },
+          {
+            "level": 4,
+            "slots": 3
+          },
+          {
+            "level": 5,
+            "slots": 2
+          },
+          {
+            "level": 6,
+            "slots": 1
+          },
+          {
+            "level": 7,
+            "slots": 1
+          },
+          {
+            "level": 8,
+            "slots": 1
+          }
+        ]
+      }
+    },
+    "index": "sorcerer-17",
+    "url": "/api/2024/classes/sorcerer/levels/17"
+  },
+  {
+    "level": 18,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "sorcerous-origin-feature-9",
+        "name": "Origin Feature",
+        "url": "/api/2024/features/sorcerous-origin-feature-9"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 18,
+      "spellcasting": {
+        "cantrips_known": 6,
+        "spells_known": 16,
+        "spell_slots": [
+          {
+            "level": 1,
+            "slots": 4
+          },
+          {
+            "level": 2,
+            "slots": 3
+          },
+          {
+            "level": 3,
+            "slots": 3
+          },
+          {
+            "level": 4,
+            "slots": 3
+          },
+          {
+            "level": 5,
+            "slots": 2
+          },
+          {
+            "level": 6,
+            "slots": 1
+          },
+          {
+            "level": 7,
+            "slots": 1
+          },
+          {
+            "level": 8,
+            "slots": 1
+          }
+        ]
+      }
+    },
+    "index": "sorcerer-18",
+    "url": "/api/2024/classes/sorcerer/levels/18"
+  },
+  {
+    "level": 19,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "sorcerer-ability-score-improvement-5",
+        "name": "Ability Score Improvement",
+        "url": "/api/2024/features/sorcerer-ability-score-improvement-5"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 19,
+      "spellcasting": {
+        "cantrips_known": 6,
+        "spells_known": 17,
+        "spell_slots": [
+          {
+            "level": 1,
+            "slots": 4
+          },
+          {
+            "level": 2,
+            "slots": 3
+          },
+          {
+            "level": 3,
+            "slots": 3
+          },
+          {
+            "level": 4,
+            "slots": 3
+          },
+          {
+            "level": 5,
+            "slots": 2
+          },
+          {
+            "level": 6,
+            "slots": 1
+          },
+          {
+            "level": 7,
+            "slots": 1
+          },
+          {
+            "level": 8,
+            "slots": 1
+          }
+        ]
+      }
+    },
+    "index": "sorcerer-19",
+    "url": "/api/2024/classes/sorcerer/levels/19"
+  },
+  {
+    "level": 20,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "sorcerous-origin-feature-10",
+        "name": "Origin Feature",
+        "url": "/api/2024/features/sorcerous-origin-feature-10"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 20,
+      "spellcasting": {
+        "cantrips_known": 6,
+        "spells_known": 17,
+        "spell_slots": [
+          {
+            "level": 1,
+            "slots": 4
+          },
+          {
+            "level": 2,
+            "slots": 3
+          },
+          {
+            "level": 3,
+            "slots": 3
+          },
+          {
+            "level": 4,
+            "slots": 3
+          },
+          {
+            "level": 5,
+            "slots": 2
+          },
+          {
+            "level": 6,
+            "slots": 1
+          },
+          {
+            "level": 7,
+            "slots": 1
+          },
+          {
+            "level": 8,
+            "slots": 1
+          }
+        ]
+      }
+    },
+    "index": "sorcerer-20",
+    "url": "/api/2024/classes/sorcerer/levels/20"
+  }
+]

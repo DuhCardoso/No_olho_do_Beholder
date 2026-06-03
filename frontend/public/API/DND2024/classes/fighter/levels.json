@@ -1,0 +1,480 @@
+[
+  {
+    "level": 1,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "fighting-style",
+        "name": "Fighting Style",
+        "url": "/api/2024/features/fighting-style"
+      },
+      {
+        "index": "second-wind",
+        "name": "Second Wind",
+        "url": "/api/2024/features/second-wind"
+      }
+    ],
+    "class_specific": {
+      "second_wind": {
+        "uses": 1
+      }
+    },
+    "index": "fighter-1",
+    "url": "/api/2024/classes/fighter/levels/1"
+  },
+  {
+    "level": 2,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "action-surge-1-use",
+        "name": "Action Surge (1/short rest)",
+        "url": "/api/2024/features/action-surge-1-use"
+      }
+    ],
+    "class_specific": {
+      "action_surge": {
+        "uses": 1
+      },
+      "second_wind": {
+        "uses": 1
+      }
+    },
+    "index": "fighter-2",
+    "url": "/api/2024/classes/fighter/levels/2"
+  },
+  {
+    "level": 3,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "martial-archetype",
+        "name": "Martial Archetype",
+        "url": "/api/2024/features/martial-archetype"
+      }
+    ],
+    "class_specific": {
+      "action_surge": {
+        "uses": 1
+      },
+      "second_wind": {
+        "uses": 1
+      }
+    },
+    "index": "fighter-3",
+    "url": "/api/2024/classes/fighter/levels/3"
+  },
+  {
+    "level": 4,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "fighter-ability-score-improvement-1",
+        "name": "Ability Score Improvement",
+        "url": "/api/2024/features/fighter-ability-score-improvement-1"
+      }
+    ],
+    "class_specific": {
+      "action_surge": {
+        "uses": 1
+      },
+      "second_wind": {
+        "uses": 2
+      }
+    },
+    "index": "fighter-4",
+    "url": "/api/2024/classes/fighter/levels/4"
+  },
+  {
+    "level": 5,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "extra-attack-2",
+        "name": "Extra Attack (2)",
+        "url": "/api/2024/features/extra-attack-2"
+      }
+    ],
+    "class_specific": {
+      "action_surge": {
+        "uses": 1
+      },
+      "second_wind": {
+        "uses": 2
+      }
+    },
+    "index": "fighter-5",
+    "url": "/api/2024/classes/fighter/levels/5"
+  },
+  {
+    "level": 6,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "martial-archetype-feature-1",
+        "name": "Archetype Feature",
+        "url": "/api/2024/features/martial-archetype-feature-1"
+      }
+    ],
+    "class_specific": {
+      "action_surge": {
+        "uses": 1
+      },
+      "second_wind": {
+        "uses": 2
+      }
+    },
+    "index": "fighter-6",
+    "url": "/api/2024/classes/fighter/levels/6"
+  },
+  {
+    "level": 7,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "martial-archetype-feature-2",
+        "name": "Archetype Feature",
+        "url": "/api/2024/features/martial-archetype-feature-2"
+      }
+    ],
+    "class_specific": {
+      "action_surge": {
+        "uses": 1
+      },
+      "second_wind": {
+        "uses": 2
+      }
+    },
+    "index": "fighter-7",
+    "url": "/api/2024/classes/fighter/levels/7"
+  },
+  {
+    "level": 8,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "fighter-ability-score-improvement-2",
+        "name": "Ability Score Improvement",
+        "url": "/api/2024/features/fighter-ability-score-improvement-2"
+      }
+    ],
+    "class_specific": {
+      "action_surge": {
+        "uses": 1
+      },
+      "second_wind": {
+        "uses": 2
+      }
+    },
+    "index": "fighter-8",
+    "url": "/api/2024/classes/fighter/levels/8"
+  },
+  {
+    "level": 9,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "indomitable-1-use",
+        "name": "Indomitable (1/long rest)",
+        "url": "/api/2024/features/indomitable-1-use"
+      }
+    ],
+    "class_specific": {
+      "action_surge": {
+        "uses": 2
+      },
+      "second_wind": {
+        "uses": 2
+      },
+      "indomitable": {
+        "uses": 1
+      }
+    },
+    "index": "fighter-9",
+    "url": "/api/2024/classes/fighter/levels/9"
+  },
+  {
+    "level": 10,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "martial-archetype-feature-3",
+        "name": "Archetype Feature",
+        "url": "/api/2024/features/martial-archetype-feature-3"
+      }
+    ],
+    "class_specific": {
+      "action_surge": {
+        "uses": 2
+      },
+      "second_wind": {
+        "uses": 2
+      },
+      "indomitable": {
+        "uses": 1
+      }
+    },
+    "index": "fighter-10",
+    "url": "/api/2024/classes/fighter/levels/10"
+  },
+  {
+    "level": 11,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "martial-archetype-feature-4",
+        "name": "Archetype Feature",
+        "url": "/api/2024/features/martial-archetype-feature-4"
+      }
+    ],
+    "class_specific": {
+      "action_surge": {
+        "uses": 2
+      },
+      "second_wind": {
+        "uses": 2
+      },
+      "indomitable": {
+        "uses": 1
+      }
+    },
+    "index": "fighter-11",
+    "url": "/api/2024/classes/fighter/levels/11"
+  },
+  {
+    "level": 12,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "fighter-ability-score-improvement-3",
+        "name": "Ability Score Improvement",
+        "url": "/api/2024/features/fighter-ability-score-improvement-3"
+      }
+    ],
+    "class_specific": {
+      "action_surge": {
+        "uses": 2
+      },
+      "second_wind": {
+        "uses": 2
+      },
+      "indomitable": {
+        "uses": 1
+      }
+    },
+    "index": "fighter-12",
+    "url": "/api/2024/classes/fighter/levels/12"
+  },
+  {
+    "level": 13,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "indomitable-2-uses",
+        "name": "Indomitable (2/long rest)",
+        "url": "/api/2024/features/indomitable-2-uses"
+      }
+    ],
+    "class_specific": {
+      "action_surge": {
+        "uses": 2
+      },
+      "second_wind": {
+        "uses": 2
+      },
+      "indomitable": {
+        "uses": 2
+      }
+    },
+    "index": "fighter-13",
+    "url": "/api/2024/classes/fighter/levels/13"
+  },
+  {
+    "level": 14,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "martial-archetype-feature-5",
+        "name": "Archetype Feature",
+        "url": "/api/2024/features/martial-archetype-feature-5"
+      }
+    ],
+    "class_specific": {
+      "action_surge": {
+        "uses": 2
+      },
+      "second_wind": {
+        "uses": 2
+      },
+      "indomitable": {
+        "uses": 2
+      }
+    },
+    "index": "fighter-14",
+    "url": "/api/2024/classes/fighter/levels/14"
+  },
+  {
+    "level": 15,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "martial-archetype-feature-6",
+        "name": "Archetype Feature",
+        "url": "/api/2024/features/martial-archetype-feature-6"
+      }
+    ],
+    "class_specific": {
+      "action_surge": {
+        "uses": 2
+      },
+      "second_wind": {
+        "uses": 2
+      },
+      "indomitable": {
+        "uses": 2
+      }
+    },
+    "index": "fighter-15",
+    "url": "/api/2024/classes/fighter/levels/15"
+  },
+  {
+    "level": 16,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "fighter-ability-score-improvement-4",
+        "name": "Ability Score Improvement",
+        "url": "/api/2024/features/fighter-ability-score-improvement-4"
+      }
+    ],
+    "class_specific": {
+      "action_surge": {
+        "uses": 2
+      },
+      "second_wind": {
+        "uses": 2
+      },
+      "indomitable": {
+        "uses": 2
+      }
+    },
+    "index": "fighter-16",
+    "url": "/api/2024/classes/fighter/levels/16"
+  },
+  {
+    "level": 17,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "action-surge-2-uses",
+        "name": "Action Surge (2/short rest)",
+        "url": "/api/2024/features/action-surge-2-uses"
+      }
+    ],
+    "class_specific": {
+      "action_surge": {
+        "uses": 2
+      },
+      "second_wind": {
+        "uses": 2
+      },
+      "indomitable": {
+        "uses": 2
+      }
+    },
+    "index": "fighter-17",
+    "url": "/api/2024/classes/fighter/levels/17"
+  },
+  {
+    "level": 18,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "martial-archetype-feature-7",
+        "name": "Archetype Feature",
+        "url": "/api/2024/features/martial-archetype-feature-7"
+      }
+    ],
+    "class_specific": {
+      "action_surge": {
+        "uses": 2
+      },
+      "second_wind": {
+        "uses": 2
+      },
+      "indomitable": {
+        "uses": 2
+      }
+    },
+    "index": "fighter-18",
+    "url": "/api/2024/classes/fighter/levels/18"
+  },
+  {
+    "level": 19,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "fighter-ability-score-improvement-5",
+        "name": "Ability Score Improvement",
+        "url": "/api/2024/features/fighter-ability-score-improvement-5"
+      }
+    ],
+    "class_specific": {
+      "action_surge": {
+        "uses": 2
+      },
+      "second_wind": {
+        "uses": 2
+      },
+      "indomitable": {
+        "uses": 2
+      }
+    },
+    "index": "fighter-19",
+    "url": "/api/2024/classes/fighter/levels/19"
+  },
+  {
+    "level": 20,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "martial-archetype-feature-8",
+        "name": "Archetype Feature",
+        "url": "/api/2024/features/martial-archetype-feature-8"
+      }
+    ],
+    "class_specific": {
+      "action_surge": {
+        "uses": 2
+      },
+      "second_wind": {
+        "uses": 2
+      },
+      "indomitable": {
+        "uses": 2
+      }
+    },
+    "index": "fighter-20",
+    "url": "/api/2024/classes/fighter/levels/20"
+  }
+]

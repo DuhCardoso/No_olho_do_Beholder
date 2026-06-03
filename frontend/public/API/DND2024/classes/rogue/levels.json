@@ -1,0 +1,392 @@
+[
+  {
+    "level": 1,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "expertise",
+        "name": "Expertise",
+        "url": "/api/2024/features/expertise"
+      },
+      {
+        "index": "sneak-attack-1d6",
+        "name": "Sneak Attack (1d6)",
+        "url": "/api/2024/features/sneak-attack-1d6"
+      },
+      {
+        "index": "thieves-cant",
+        "name": "Thieves' Cant",
+        "url": "/api/2024/features/thieves-cant"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "damage": "1d6"
+      }
+    },
+    "index": "rogue-1",
+    "url": "/api/2024/classes/rogue/levels/1"
+  },
+  {
+    "level": 2,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "cunning-action",
+        "name": "Cunning Action",
+        "url": "/api/2024/features/cunning-action"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "damage": "1d6"
+      }
+    },
+    "index": "rogue-2",
+    "url": "/api/2024/classes/rogue/levels/2"
+  },
+  {
+    "level": 3,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "rogue-archetype",
+        "name": "Rogue Archetype",
+        "url": "/api/2024/features/rogue-archetype"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "damage": "2d6"
+      }
+    },
+    "index": "rogue-3",
+    "url": "/api/2024/classes/rogue/levels/3"
+  },
+  {
+    "level": 4,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "rogue-ability-score-improvement-1",
+        "name": "Ability Score Improvement",
+        "url": "/api/2024/features/rogue-ability-score-improvement-1"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "damage": "2d6"
+      }
+    },
+    "index": "rogue-4",
+    "url": "/api/2024/classes/rogue/levels/4"
+  },
+  {
+    "level": 5,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "unerring-attack",
+        "name": "Uncanny Dodge",
+        "url": "/api/2024/features/uncanny-dodge"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "damage": "3d6"
+      }
+    },
+    "index": "rogue-5",
+    "url": "/api/2024/classes/rogue/levels/5"
+  },
+  {
+    "level": 6,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "rogue-archetype-feature-1",
+        "name": "Archetype Feature",
+        "url": "/api/2024/features/rogue-archetype-feature-1"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "damage": "3d6"
+      }
+    },
+    "index": "rogue-6",
+    "url": "/api/2024/classes/rogue/levels/6"
+  },
+  {
+    "level": 7,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "evasion",
+        "name": "Evasion",
+        "url": "/api/2024/features/evasion"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "damage": "4d6"
+      }
+    },
+    "index": "rogue-7",
+    "url": "/api/2024/classes/rogue/levels/7"
+  },
+  {
+    "level": 8,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "rogue-ability-score-improvement-2",
+        "name": "Ability Score Improvement",
+        "url": "/api/2024/features/rogue-ability-score-improvement-2"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "damage": "4d6"
+      }
+    },
+    "index": "rogue-8",
+    "url": "/api/2024/classes/rogue/levels/8"
+  },
+  {
+    "level": 9,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "rogue-archetype-feature-2",
+        "name": "Archetype Feature",
+        "url": "/api/2024/features/rogue-archetype-feature-2"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "damage": "5d6"
+      }
+    },
+    "index": "rogue-9",
+    "url": "/api/2024/classes/rogue/levels/9"
+  },
+  {
+    "level": 10,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "rogue-archetype-feature-3",
+        "name": "Archetype Feature",
+        "url": "/api/2024/features/rogue-archetype-feature-3"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "damage": "5d6"
+      }
+    },
+    "index": "rogue-10",
+    "url": "/api/2024/classes/rogue/levels/10"
+  },
+  {
+    "level": 11,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "reliable-talent",
+        "name": "Reliable Talent",
+        "url": "/api/2024/features/reliable-talent"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "damage": "6d6"
+      }
+    },
+    "index": "rogue-11",
+    "url": "/api/2024/classes/rogue/levels/11"
+  },
+  {
+    "level": 12,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "rogue-ability-score-improvement-3",
+        "name": "Ability Score Improvement",
+        "url": "/api/2024/features/rogue-ability-score-improvement-3"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "damage": "6d6"
+      }
+    },
+    "index": "rogue-12",
+    "url": "/api/2024/classes/rogue/levels/12"
+  },
+  {
+    "level": 13,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "rogue-archetype-feature-4",
+        "name": "Archetype Feature",
+        "url": "/api/2024/features/rogue-archetype-feature-4"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "damage": "7d6"
+      }
+    },
+    "index": "rogue-13",
+    "url": "/api/2024/classes/rogue/levels/13"
+  },
+  {
+    "level": 14,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "blindsense",
+        "name": "Blindsense",
+        "url": "/api/2024/features/blindsense"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "damage": "7d6"
+      }
+    },
+    "index": "rogue-14",
+    "url": "/api/2024/classes/rogue/levels/14"
+  },
+  {
+    "level": 15,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "rogue-archetype-feature-5",
+        "name": "Archetype Feature",
+        "url": "/api/2024/features/rogue-archetype-feature-5"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "damage": "8d6"
+      }
+    },
+    "index": "rogue-15",
+    "url": "/api/2024/classes/rogue/levels/15"
+  },
+  {
+    "level": 16,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "rogue-ability-score-improvement-4",
+        "name": "Ability Score Improvement",
+        "url": "/api/2024/features/rogue-ability-score-improvement-4"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "damage": "8d6"
+      }
+    },
+    "index": "rogue-16",
+    "url": "/api/2024/classes/rogue/levels/16"
+  },
+  {
+    "level": 17,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "rogue-archetype-feature-6",
+        "name": "Archetype Feature",
+        "url": "/api/2024/features/rogue-archetype-feature-6"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "damage": "9d6"
+      }
+    },
+    "index": "rogue-17",
+    "url": "/api/2024/classes/rogue/levels/17"
+  },
+  {
+    "level": 18,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "elusive",
+        "name": "Elusive",
+        "url": "/api/2024/features/elusive"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "damage": "9d6"
+      }
+    },
+    "index": "rogue-18",
+    "url": "/api/2024/classes/rogue/levels/18"
+  },
+  {
+    "level": 19,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "rogue-ability-score-improvement-5",
+        "name": "Ability Score Improvement",
+        "url": "/api/2024/features/rogue-ability-score-improvement-5"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "damage": "10d6"
+      }
+    },
+    "index": "rogue-19",
+    "url": "/api/2024/classes/rogue/levels/19"
+  },
+  {
+    "level": 20,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "stroke-of-luck",
+        "name": "Stroke of Luck",
+        "url": "/api/2024/features/stroke-of-luck"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "damage": "10d6"
+      }
+    },
+    "index": "rogue-20",
+    "url": "/api/2024/classes/rogue/levels/20"
+  }
+]

@@ -23,18 +23,19 @@
     "Caótico e Mau"
   ],
   "classes": [
-    "Guerreiro",
-    "Mago",
-    "Ladino",
-    "Clérigo",
-    "Paladino",
-    "Ranger",
-    "Druida",
-    "Bárbaro",
-    "Bardo",
-    "Feiticeiro",
-    "Bruxo",
-    "Monge"
+    { "name": "Artifecer" },
+    { "name": "Guerreiro" },
+    { "name": "Mago" },
+    { "name": "Ladino" },
+    { "name": "Clérigo" },
+    { "name": "Paladino" },
+    { "name": "Ranger" },
+    { "name": "Druida" },
+    { "name": "Bárbaro" },
+    { "name": "Bardo" },
+    { "name": "Feiticeiro" },
+    { "name": "Bruxo" },
+    { "name": "Monge" }
   ],
   "subClasses": {
     "Guerreiro": ["Campeão", "Mestre de Batalha", "Cavaleiro Arcano"],

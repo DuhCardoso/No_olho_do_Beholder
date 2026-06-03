@@ -1,0 +1,70 @@
+[
+  {
+    "index": "barbarian",
+    "name": "Barbaro",
+    "url": "/api/2024/classes/barbarian"
+  },
+  {
+    "index": "bard",
+    "name": "Bardo",
+    "spells": "/api/2024/classes/bard/spells",
+    "url": "/api/2024/classes/bard"
+  },
+  {
+    "index": "cleric",
+    "name": "Clérigo",
+    "spells": "/api/2024/classes/cleric/spells",
+    "url": "/api/2024/classes/cleric"
+  },
+  {
+    "index": "druid",
+    "name": "Druida",
+    "spells": "/api/2024/classes/druid/spells",
+    "url": "/api/2024/classes/druid"
+  },
+  {
+    "index": "fighter",
+    "name": "Guerreiro",
+    "url": "/api/2024/classes/fighter"
+  },
+  {
+    "index": "monk",
+    "name": "Monge",
+    "url": "/api/2024/classes/monk"
+  },
+  {
+    "index": "paladin",
+    "name": "Paladino",
+    "spells": "/api/2024/classes/paladin/spells",
+    "url": "/api/2024/classes/paladin"
+  },
+  {
+    "index": "ranger",
+    "name": "Patrulheiro",
+    "spells": "/api/2024/classes/ranger/spells",
+    "url": "/api/2024/classes/ranger"
+  },
+  {
+    "index": "rogue",
+    "name": "Ladino",
+    "url": "/api/2024/classes/rogue"
+  },
+  {
+    "index": "sorcerer",
+    "name": "Feiticeiro",
+    "spells": "/api/2024/classes/sorcerer/spells",
+    "url": "/api/2024/classes/sorcerer"
+  },
+  {
+    "index": "warlock",
+    "name": "Bruxo",
+    "spells": "/api/2024/classes/warlock/spells",
+    "url": "/api/2024/classes/warlock"
+  },
+  {
+    "index": "wizard",
+    "name": "Mago",
+    "spells": "/api/2024/classes/wizard/spells",
+    "url": "/api/2024/classes/wizard"
+  }
+]

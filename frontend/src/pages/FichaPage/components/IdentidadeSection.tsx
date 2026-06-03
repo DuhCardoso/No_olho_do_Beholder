@@ -46,7 +46,9 @@ const IdentidadeSection = ({ sistemaDetail, sheet, set }: { sistemaDetail: any; 
                     <RpgLabel>CLASSE</RpgLabel>
                     <select className="rpg-input cursor-pointer" value={sheet.classe} onChange={(e) => set("classe", e.target.value)}>
                         <option value="">— Escolha —</option>
-                        {sistemaDetail.classes?.map((classe: string) => <option key={classe}>{classe}</option>)}
+                        {sistemaDetail.classes?.map((classe: { name: string }) =>
+                            <option key={classe.name}>{classe.name}</option>
+                        )}
                     </select>
                 </div>
 

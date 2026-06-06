@@ -1,20 +1,19 @@
 {
   "index": "bard",
-  "name": "Bard",
+  "name": "Bardo",
   "primary_ability": {
     "desc": "Charisma",
     "ability_scores": [
       {
-        "index": "cha",
-        "name": "CHA",
-        "url": "/api/2024/ability-scores/cha"
+        "index": "car",
+        "name": "CAR"
       }
     ]
   },
   "hit_die": 8,
   "proficiency_choices": [
     {
-      "desc": "Choose any 3 skills",
+      "desc": "Escolher 3 entre:  Lidar c/ Animais, Acrobacia, Arcanismo, Atletismo, Enganação, História, Intuição, Intimidação, Investigação, Medicina, Natureza, Percepção, Atuação, Persuasão, Religião, Prestidigitação, Furtividade, ou Sobrevivência",
       "choose": 3,
       "type": "proficiencies",
       "from": {
@@ -24,151 +23,133 @@
             "option_type": "reference",
             "item": {
               "index": "skill-acrobatics",
-              "name": "Skill: Acrobatics",
-              "url": "/api/2024/proficiencies/skill-acrobatics"
+              "name": "Acrobacia"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "skill-animal-handling",
-              "name": "Skill: Animal Handling",
-              "url": "/api/2024/proficiencies/skill-animal-handling"
+              "name": "Lidar c/ Animais"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "skill-arcana",
-              "name": "Skill: Arcana",
-              "url": "/api/2024/proficiencies/skill-arcana"
+              "name": "Arcanismo"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "skill-athletics",
-              "name": "Skill: Athletics",
-              "url": "/api/2024/proficiencies/skill-athletics"
+              "name": "Atletismo"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "skill-deception",
-              "name": "Skill: Deception",
-              "url": "/api/2024/proficiencies/skill-deception"
+              "name": "Enganação"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "skill-history",
-              "name": "Skill: History",
-              "url": "/api/2024/proficiencies/skill-history"
+              "name": "História"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "skill-insight",
-              "name": "Skill: Insight",
-              "url": "/api/2024/proficiencies/skill-insight"
+              "name": "Intuição"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "skill-intimidation",
-              "name": "Skill: Intimidation",
-              "url": "/api/2024/proficiencies/skill-intimidation"
+              "name": "Intimidação"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "skill-investigation",
-              "name": "Skill: Investigation",
-              "url": "/api/2024/proficiencies/skill-investigation"
+              "name": "Investigação"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "skill-medicine",
-              "name": "Skill: Medicine",
-              "url": "/api/2024/proficiencies/skill-medicine"
+              "name": "Medicina"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "skill-nature",
-              "name": "Skill: Nature",
-              "url": "/api/2024/proficiencies/skill-nature"
+              "name": "Natureza"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "skill-perception",
-              "name": "Skill: Perception",
-              "url": "/api/2024/proficiencies/skill-perception"
+              "name": "Percepção"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "skill-performance",
-              "name": "Skill: Performance",
-              "url": "/api/2024/proficiencies/skill-performance"
+              "name": "Atuação"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "skill-persuasion",
-              "name": "Skill: Persuasion",
-              "url": "/api/2024/proficiencies/skill-persuasion"
+              "name": "Persuasão"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "skill-religion",
-              "name": "Skill: Religion",
-              "url": "/api/2024/proficiencies/skill-religion"
+              "name": "Religião"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "skill-sleight-of-hand",
-              "name": "Skill: Sleight of Hand",
-              "url": "/api/2024/proficiencies/skill-sleight-of-hand"
+              "name": "Prestidigitação"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "skill-stealth",
-              "name": "Skill: Stealth",
-              "url": "/api/2024/proficiencies/skill-stealth"
+              "name": "Furtividade"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "skill-survival",
-              "name": "Skill: Survival",
-              "url": "/api/2024/proficiencies/skill-survival"
+              "name": "Sobrevivência"
             }
           }
         ]
       }
     },
     {
-      "desc": "Three musical instruments of your choice",
+      "desc": "Escolher 3 entre:",
       "choose": 3,
       "type": "proficiencies",
       "from": {
@@ -178,80 +159,70 @@
             "option_type": "reference",
             "item": {
               "index": "bagpipes",
-              "name": "Bagpipes",
-              "url": "/api/2024/proficiencies/bagpipes"
+              "name": "Gaita de Fole"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "drum",
-              "name": "Drum",
-              "url": "/api/2024/proficiencies/drum"
+              "name": "Tambor"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "dulcimer",
-              "name": "Dulcimer",
-              "url": "/api/2024/proficiencies/dulcimer"
+              "name": "Dulcimer"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "flute",
-              "name": "Flute",
-              "url": "/api/2024/proficiencies/flute"
+              "name": "Flauta"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "lute",
-              "name": "Lute",
-              "url": "/api/2024/proficiencies/lute"
+              "name": "Alaúde"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "lyre",
-              "name": "Lyre",
-              "url": "/api/2024/proficiencies/lyre"
+              "name": "Lira"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "horn",
-              "name": "Horn",
-              "url": "/api/2024/proficiencies/horn"
+              "name": "Trombeta"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "pan-flute",
-              "name": "Pan flute",
-              "url": "/api/2024/proficiencies/pan-flute"
+              "name": "Flauta de Pã"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "shawm",
-              "name": "Shawm",
-              "url": "/api/2024/proficiencies/shawm"
+              "name": "Trompete"
             }
           },
           {
             "option_type": "reference",
             "item": {
               "index": "viol",
-              "name": "Viol",
-              "url": "/api/2024/proficiencies/viol"
+              "name": "Violino"
             }
           }
         ]
@@ -261,35 +232,21 @@
   "proficiencies": [
     {
       "index": "light-armor",
-      "name": "Light Armor",
-      "url": "/api/2024/proficiencies/light-armor"
+      "name": "Light Armor"
     },
     {
       "index": "simple-weapons",
-      "name": "Simple Weapons",
-      "url": "/api/2024/proficiencies/simple-weapons"
-    },
-    {
-      "index": "saving-throw-dex",
-      "name": "Saving Throw: DEX",
-      "url": "/api/2024/proficiencies/saving-throw-dex"
-    },
-    {
-      "index": "saving-throw-cha",
-      "name": "Saving Throw: CHA",
-      "url": "/api/2024/proficiencies/saving-throw-cha"
+      "name": "Simple Weapons"
     }
   ],
   "saving_throws": [
     {
-      "index": "dex",
-      "name": "DEX",
-      "url": "/api/2024/ability-scores/dex"
+      "index": "des",
+      "name": "DES"
     },
     {
-      "index": "cha",
-      "name": "CHA",
-      "url": "/api/2024/ability-scores/cha"
+      "index": "car",
+      "name": "CAR"
     }
   ],
   "starting_equipment_options": [
@@ -346,14 +303,13 @@
       }
     }
   ],
-  "class_levels": "/api/2024/classes/bard/levels",
+  "class_levels": "/API/DND2024/classes/bard/levels.json",
   "multi_classing": {
     "prerequisites": [
       {
         "ability_score": {
           "index": "cha",
-          "name": "CHA",
-          "url": "/api/2024/ability-scores/cha"
+          "name": "CHA"
         },
         "minimum_score": 13
       }
@@ -361,8 +317,7 @@
     "proficiencies": [
       {
         "index": "light-armor",
-        "name": "Light Armor",
-        "url": "/api/2024/proficiencies/light-armor"
+        "name": "Light Armor"
       }
     ],
     "proficiency_choices": [
@@ -612,13 +567,7 @@
       }
     ]
   },
-  "subclasses": [
-    {
-      "index": "college-of-lore",
-      "name": "College of Lore",
-      "url": "/api/2024/subclasses/college-of-lore"
-    }
-  ],
+  "subclasses": "/API/DND2024/classes/bard/subclasses.json",
   "spellcasting": {
     "level": 1,
     "spellcasting_ability": {

@@ -2,7 +2,7 @@
   "index": "barbarian",
   "name": "Barbaro",
   "primary_ability": {
-    "desc": "Strength",
+    "desc": "Força",
     "ability_scores": [
       {
         "index": "for",
@@ -156,7 +156,7 @@
       }
     }
   ],
-  "class_levels": "/api/DND2024/classes/barbarian/levels",
+  "class_levels": "/API/DND2024/classes/barbarian/levels.json",
   "multi_classing": {
     "prerequisites": [
       {
@@ -178,5 +178,5 @@
       }
     ]
   },
-  "subclasses": "/api/DND2024/classes/barbarian/subclasses"
+  "subclasses": "/API/DND2024/classes/barbarian/subclasses.json"
 }
